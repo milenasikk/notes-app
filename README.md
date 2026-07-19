@@ -59,4 +59,4 @@ Located in the top right corner of the application:
 
 1. Clone the repository / Склонируйте репозиторий:
    ```bash
-   git clone [https://github.com/ваш-логин/notes-app.git](https://github.com/ваш-логин/notes-app.git)
+   git clone [https://github.com/milenasikk/notes-app.git](https://github.com/milenasikk/notes-app.git)
