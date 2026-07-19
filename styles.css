@@ -1,0 +1,205 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  background: transparent;
+  user-select: none;
+  -webkit-app-region: drag;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
+
+button,
+input,
+textarea,
+select {
+  -webkit-app-region: no-drag;
+  cursor: pointer;
+}
+
+.app {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 246, 237); 
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px; 
+  border: 7px solid rgb(250, 192, 135);
+  border-radius: 30px; 
+  position: fixed;
+}
+
+.window-controls {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  display: flex;
+  gap: 5px;
+  -webkit-app-region: no-drag;
+  cursor: pointer;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  -webkit-app-region: no-drag;
+  position: relative;
+  z-index: 999;
+  cursor: pointer;
+}
+
+.btn1,
+.btn2,
+.btn3,
+.btn4 {
+  -webkit-app-region: no-drag !important;
+  cursor: pointer;
+  width: 50px;
+  height: auto;
+  display: block;
+  user-select: none;
+}
+
+.user-input {
+  font-family: "Pixelify Sans", sans-serif;
+  background-color: rgb(255, 246, 237);
+  color: rgb(59, 38, 18);
+  width: 345px;
+  height: 250px; 
+  border-radius: 17px;
+  padding: 12px;
+  resize: none;
+  outline: none;
+  border: 2.5px solid rgb(250, 192, 135);
+  cursor: text;
+}
+
+.user-input::-webkit-scrollbar {
+  width: 10px; 
+}
+
+.user-input::-webkit-scrollbar-track {
+  background: rgb(255, 246, 237);
+  border-radius: 0 14px 14px 0;
+}
+
+.user-input::-webkit-scrollbar-thumb {
+  background-color: rgb(250, 192, 135);
+  border: 2px solid rgb(255, 246, 237);
+  border-radius: 10px;
+}
+
+.user-input::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(235, 175, 115);
+}
+
+.title {
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 30px;
+  font-style: normal;
+  color: rgb(250, 192, 135);
+  margin-top: -10px;
+}
+
+.notes-list-container {
+  width: 345px;
+  height: 250px;
+  background-color: rgb(255, 246, 237);
+  border: 2.5px solid rgb(250, 192, 135);
+  border-radius: 17px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-family: "Pixelify Sans", sans-serif;
+  -webkit-app-region: no-drag;
+}
+
+.notes-list-header {
+  display: flex;
+  justify-content: space-between;
+  color: rgb(59, 38, 18);
+  font-weight: bold;
+}
+
+.close-list-btn {
+  background: none;
+  border: none;
+  color: rgb(250, 192, 135);
+  font-family: "Pixelify Sans", sans-serif;
+  cursor: pointer;
+  -webkit-app-region: no-drag;
+}
+
+.search-input {
+  font-family: "Pixelify Sans", sans-serif;
+  width: 100%;
+  padding: 6px 10px;
+  background-color: rgb(255, 246, 237);
+  border: 2px solid rgb(250, 192, 135);
+  border-radius: 8px;
+  color: rgb(59, 38, 18);
+  outline: none;
+  -webkit-app-region: no-drag;
+  cursor: text;
+}
+
+.notes-list-content {
+  flex-grow: 1;
+  overflow-y: auto;
+  -webkit-app-region: no-drag;
+}
+
+.notes-list-content::-webkit-scrollbar { width: 10px; }
+.notes-list-content::-webkit-scrollbar-track { background: rgb(255, 246, 237); border-radius: 0 14px 14px 0; }
+.notes-list-content::-webkit-scrollbar-thumb { background-color: rgb(250, 192, 135); border: 2px solid rgb(255, 246, 237); border-radius: 10px; }
+
+.note-item {
+  padding: 8px;
+  margin-bottom: 6px;
+  background-color: rgba(250, 192, 135, 0.15);
+  border: 2px dashed rgb(250, 192, 135);
+  border-radius: 8px;
+  color: rgb(59, 38, 18);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  -webkit-app-region: no-drag !important;
+}
+
+.note-item:hover {
+  background-color: rgb(250, 192, 135);
+  color: white;
+}
+
+.note-text-preview {
+  font-size: 14px;
+}
+
+.note-date {
+  font-size: 10px;
+  opacity: 0.6;
+  text-align: right;
+}
+
+.notes-list-content .note-item.active-note,
+.notes-list-content .note-item.active-note:hover {
+  background-color: rgb(235, 140, 80) !important;
+  color: #ffffff !important;
+  border: 2px solid rgb(195, 110, 50) !important;
+}
+
+.notes-list-content .note-item.active-note .note-date {
+  color: #ffffff !important;
+  opacity: 0.9;
+}

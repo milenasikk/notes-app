@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+  <title>Pixel Notes!</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+
+    <div class="text">
+      <p class="title">Pixel Notes!</p>
+    </div>
+
+    <div class="window-controls">
+      <img src="assets/shrink.png" class="shrink" width="20px">
+      <img src="assets/close.png" class="close" width="20px">
+    </div>
+
+    <div class="input">
+      <textarea placeholder="Type your notes here..." class="user-input"></textarea>
+    </div>
+
+    <div class="notes-list-container" style="display: none;">
+      <div class="notes-list-header">
+        <span>Your Saved Notes:</span>
+        <img src="assets/close.png" class="close-list-btn" width="16px">
+      </div>
+      <input type="text" class="search-input" placeholder="Search notes...">
+      <div class="notes-list-content"></div>
+    </div>
+
+    <div class="buttons">
+      <img src="assets/btn1.png" class="btn1" alt="new">
+      <img src="assets/btn2.png" class="btn2" alt="save">
+      <img src="assets/btn3.png" class="btn3" alt="del">
+      <img src="assets/btn4.png" class="btn4" alt="notes">
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
